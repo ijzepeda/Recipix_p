@@ -7,53 +7,107 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about" onclick="showSection('about')">About</a></li>
+            <li><a href="#paper" onclick="showSection('paper')">Paper</a></li>
+            <li><a href="#video" onclick="showSection('video')">Video</a></li>
+            <li><a href="#request-demo" onclick="showSection('request-demo')">Request Demo</a></li>
+            <li><a href="#concept-demo" onclick="showSection('concept-demo')">Concept Demo</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
-        <h1>Recipix Food Recognition & Recipe Recommendation</h1>
-        <div class="step">
-            <h2>Step 1: Select a Fridge or Pantry</h2>
-            <div class="fridges">
-                <img src="images/pantry1.jpg" alt="Pantry 1" draggable="true" id="pantry1" class="draggable">
-                <img src="images/pantry2.jpg" alt="Pantry 2" draggable="true" id="pantry2" class="draggable">
-                <img src="images/pantry3.jpg" alt="Pantry 3" draggable="true" id="pantry3" class="draggable">
-            </div>
-            <div class="drop-zone" id="drop-zone">
-                <p>Drag and drop your selected pantry image here</p>
-            </div>
-        </div>
 
-        <div class="step" id="ingredients-section">
-            <h2>Step 2: Ingredients Detected</h2>
-            <div class="ingredients" id="ingredients">
-                <!-- Ingredients will be shown here -->
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h1>About Recipix</h1>
+            <p>Recipix is an AI-powered food recognition and recipe recommendation system. It helps reduce food waste by identifying ingredients and suggesting personalized recipes based on your preferences.</p>
+        </section>
+
+        <!-- Paper Section -->
+        <section id="paper" class="section" style="display:none;">
+            <h1>Research Paper</h1>
+            <p>This is the paper section where details about the research behind Recipix can be shown.</p>
+        </section>
+
+        <!-- Video Section -->
+        <section id="video" class="section" style="display:none;">
+            <h1>Introduction Video</h1>
+            <video width="320" height="240" controls>
+                <source src="video/recipix_demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <!-- Request Demo Section -->
+        <section id="request-demo" class="section" style="display:none;">
+            <h1>Request a Demo</h1>
+            <p>If you are interested in trying Recipix for yourself, contact us to request a live demo.</p>
+        </section>
+
+        <!-- Concept Demo Section -->
+        <section id="concept-demo" class="section" style="display:none;">
+            <h1>Recipix Food Recognition & Recipe Recommendation</h1>
+            <div class="step">
+                <h2>Step 1: Select a Fridge or Pantry</h2>
+                <div class="fridges">
+                    <img src="images/pantry1.jpg" alt="Pantry 1" draggable="true" id="pantry1" class="draggable">
+                    <img src="images/pantry2.jpg" alt="Pantry 2" draggable="true" id="pantry2" class="draggable">
+                    <img src="images/pantry3.jpg" alt="Pantry 3" draggable="true" id="pantry3" class="draggable">
+                </div>
+                <div class="drop-zone" id="drop-zone">
+                    <p>Drag and drop your selected pantry image here</p>
+                </div>
             </div>
-        </div>
 
-        <div class="step" id="recipe-section">
-            <h2>Step 3: Suggested Recipe</h2>
-            <div id="recipe">
-                <!-- Recipe will be shown here -->
+            <div class="step" id="ingredients-section">
+                <h2>Step 2: Ingredients Detected</h2>
+                <div class="ingredients" id="ingredients">
+                    <!-- Ingredients will be shown here -->
+                </div>
             </div>
-        </div>
 
-        <div class="preferences">
-            <h2>Match Your Preferences</h2>
-            <label for="diet">Diet:</label>
-            <select id="diet">
-                <option value="none">None</option>
-                <option value="vegan">Vegan</option>
-                <option value="gluten-free">Gluten-Free</option>
-            </select>
-            
-            <label for="allergies">Allergies:</label>
-            <input type="text" id="allergies" placeholder="Enter allergies (e.g., peanuts)">
+            <div class="step" id="recipe-section">
+                <h2>Step 3: Suggested Recipe</h2>
+                <div id="recipe">
+                    <!-- Recipe will be shown here -->
+                </div>
+            </div>
 
-            <label for="likes">Likes:</label>
-            <input type="text" id="likes" placeholder="Enter preferred ingredients (e.g., chicken)">
-            
-            <button id="update-preferences">Update Preferences</button>
-        </div>
+            <div class="preferences">
+                <h2>Match Your Preferences</h2>
+                <label for="diet">Diet:</label>
+                <select id="diet">
+                    <option value="none">None</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="gluten-free">Gluten-Free</option>
+                </select>
+
+                <label for="allergies">Allergies:</label>
+                <input type="text" id="allergies" placeholder="Enter allergies (e.g., peanuts)">
+
+                <label for="likes">Likes:</label>
+                <input type="text" id="likes" placeholder="Enter preferred ingredients (e.g., chicken)">
+                
+                <button id="update-preferences">Update Preferences</button>
+            </div>
+        </section>
+
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Function to show and hide sections based on the menu clicked
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.style.display = 'none');
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+
 </body>
 </html>
