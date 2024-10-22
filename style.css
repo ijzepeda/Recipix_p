@@ -82,3 +82,80 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+/* Styling the navigation bar */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Container styling */
+.container {
+    padding: 20px;
+}
+
+/* Section styling */
+.section {
+    display: none;
+    margin-top: 20px;
+}
+
+.section h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Step section styling for the Concept Demo */
+.step {
+    margin-top: 20px;
+}
+
+.fridges {
+    display: flex;
+    justify-content: space-around;
+}
+
+.fridges img {
+    width: 150px;
+    cursor: pointer;
+}
+
+.drop-zone {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.preferences {
+    margin-top: 20px;
+}
+
+#recipe, #ingredients {
+    margin-top: 10px;
+}
+
