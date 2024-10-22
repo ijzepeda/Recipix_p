@@ -33,6 +33,7 @@ This repository contains the **public documentation**, **user guides**, and an o
 1. **Image Processing**: Take a photo of your fridge or pantry, and Recipix uses image recognition to detect available ingredients.
 2. **NLP Matching**: The detected ingredients are matched with a database of recipes based on your dietary preferences.
 3. **Recipe Generation**: Recipix generates a personalized recipe in PDF format, which can be downloaded or shared.
+4. [Try the Conceptual Interactive Demo] (https://ijzepeda.github.io/try_recipix/)
 
 ## Getting Started
 
