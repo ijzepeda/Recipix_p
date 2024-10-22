@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipix Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recipix Food Recognition & Recipe Recommendation</h1>
+        <div class="step">
+            <h2>Step 1: Select a Fridge or Pantry</h2>
+            <div class="fridges">
+                <img src="images/pantry1.jpg" alt="Pantry 1" draggable="true" id="pantry1" class="draggable">
+                <img src="images/pantry2.jpg" alt="Pantry 2" draggable="true" id="pantry2" class="draggable">
+                <img src="images/pantry3.jpg" alt="Pantry 3" draggable="true" id="pantry3" class="draggable">
+            </div>
+            <div class="drop-zone" id="drop-zone">
+                <p>Drag and drop your selected pantry image here</p>
+            </div>
+        </div>
+
+        <div class="step" id="ingredients-section">
+            <h2>Step 2: Ingredients Detected</h2>
+            <div class="ingredients" id="ingredients">
+                <!-- Ingredients will be shown here -->
+            </div>
+        </div>
+
+        <div class="step" id="recipe-section">
+            <h2>Step 3: Suggested Recipe</h2>
+            <div id="recipe">
+                <!-- Recipe will be shown here -->
+            </div>
+        </div>
+
+        <div class="preferences">
+            <h2>Match Your Preferences</h2>
+            <label for="diet">Diet:</label>
+            <select id="diet">
+                <option value="none">None</option>
+                <option value="vegan">Vegan</option>
+                <option value="gluten-free">Gluten-Free</option>
+            </select>
+            
+            <label for="allergies">Allergies:</label>
+            <input type="text" id="allergies" placeholder="Enter allergies (e.g., peanuts)">
+
+            <label for="likes">Likes:</label>
+            <input type="text" id="likes" placeholder="Enter preferred ingredients (e.g., chicken)">
+            
+            <button id="update-preferences">Update Preferences</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
