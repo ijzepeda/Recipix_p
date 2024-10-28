@@ -13,27 +13,106 @@
             <li><a href="#about" onclick="showSection('about')">About</a></li>
             <li><a href="#paper" onclick="showSection('paper')">Paper</a></li>
             <li><a href="#video" onclick="showSection('video')">Video</a></li>
+            <li><a href="#concept" onclick="showSection('concept')">Concept</a></li>
+            <!-- <li><a href="#diagram" onclick="showSection('diagram')">Diagram</a></li> -->
+
             <li><a href="#request-demo" onclick="showSection('request-demo')">Request Demo</a></li>
-<!--             <li><a href="#concept-demo" onclick="showSection('concept-demo')">Concept Demo</a></li> -->
         </ul>
     </nav>
 
-    <div class="container">
-
+    <div class="container" >
         <!-- About Section -->
-        <section id="about" class="section">
-            <h1>Recipix Food Recognition & Recipe Recommendation</h1>
-            
+
+        <section id="about" class="section" style="display: block;">
+            <h1><img src="images/recipix_logo.png" width="150px"></h1>
             <h1>About Recipix</h1>
+<p>Recipix is an innovative AI-powered system designed to reduce food waste and simplify meal planning. By combining computer vision and natural language processing (NLP), Recipix recognizes ingredients in fridge or pantry images, generating personalized recipe suggestions based on your dietary preferences, allergies, and available items. From advanced model training to real-time interaction, here’s what makes Recipix a cutting-edge solution:</p>
+<div style="text-align: center;">
+
+<img src="images/recipix_diagram.png" width="550px" alt="Recipix Diagram"><br>
+        <small>Recipix Diagram</small>
+</div>
+<p>
+Comprehensive AI System Design: Led the development of Recipix by implementing a multimodal AI approach, leveraging both computer vision and NLP for real-time ingredient detection and recipe recommendation.</p>
+<p>
+
+Advanced Computer Vision: Developed and optimized ResNet-50, YOLO, and Segment Anything Model (SAM) frameworks to achieve over 81% classification accuracy across 88 diverse food categories.</p>
+<p>
+
+Extensive Dataset Curation: Curated and expanded a dataset with over 41,000 images, ensuring a robust and diverse collection for training and evaluation, including advanced image augmentation techniques (rotation, scaling, flipping) for model generalization.</p>
+<p>
+
+Precision Recipe Recommendations: Built a powerful recommendation engine using SpaCy, Word2Vec, TF-IDF, and LDA to match detected ingredients with a comprehensive recipe database, integrating user dietary preferences, allergies, and food likes/dislikes to deliver highly personalized meal plans.</p>
+<p>
+
+Innovative NLP Models and Learning Techniques: Fine-tuned TF-IDF and Non-Negative Matrix Factorization (NMF) models, providing recommendations that cater to a variety of user-specific needs, from vegan to gluten-free.</p>
+<p>
+
+ <div style="text-align: center; margin-top: 15px;">
+        <img src="images/at_diagram.jpg" width="400px" alt="Recipix System Diagram"><br>
+        <small>System Diagram of Recipix Components and Flow</small>
+    </div>
+
+
+Real-Time User Interaction: Developed a responsive interface through FastAPI and Telegram Bot API. Users can seamlessly upload images and receive recipes directly, enhancing accessibility and engagement.</p>
+<p>
+
+Efficient Backend Architecture: Created a scalable backend using Django and PostgreSQL to manage recipe data, user preferences, and ingredient classifications, while Docker and Celery with Redis improve processing speed and efficiency.</p>
+<p>
+
+Optimized Processing Pipelines: By utilizing NVIDIA GPU acceleration (CUDA), processing times were reduced from 5 minutes to just 5 seconds, allowing Recipix to handle large volumes of data without latency issues.</p>
+
+<div style="text-align: center; margin-top: 15px; display: flex; justify-content: center;">
+    <div style="text-align: center; margin-top: 15px;">
+        <img src="images/at_user_photo.png" width="250px" alt="User Fridge Image"><br>
+        <small>User's Fridge Image</small>
+    </div>
+    <div style="text-align: center; margin-top: 15px;">
+        <img src="images/at_user_photo_segemented.png" width="250px" alt="Segmented User Image"><br>
+        <small>Segmented Ingredients with SAM</small>
+    </div>
+</div>
+
+
+<p>
+
+Automated Data Collection: Implemented automated web scraping using BeautifulSoup and Selenium to populate the recipe database, ensuring up-to-date and varied recipe suggestions.
+
+    </p>
+<p>
+
+Enhanced Food Recognition: Developed custom image segmentation algorithms with OpenCV and SAM, enabling accurate food item detection even in complex scenes like overlapping objects.
+<div style="text-align: center; margin-top: 15px;">
+        <img src="images/at_segmented_image_classified.png" width="250px" alt="Classified Ingredients"><br>
+        <small>Ingredients Classified Using CNN</small>
+    </div>
+</p>
+<p>
+
+User-Friendly Recipe Visualization: Integrated DALL·E API to generate PDFs with visual meal suggestions, creating a more interactive and engaging experience for users.</p>
+<p>
+
+    <div style="text-align: center; margin-top: 15px;">
+        <img src="images/at_generated_pdf.png" width="250px" alt="Generated Recipe PDF"><br>
+        <small>Generated Recipe PDF Based on Detected Ingredients</small>
+    </div>
+Cross-Functional Collaboration: Continuously collaborated with cross-functional teams to ensure that model performance aligns with the latest advancements in machine learning and AI.</p>
+<p>
+
+Comprehensive Documentation and Guides: Developed in-depth technical documentation and user guides, making it easy for developers and stakeholders to understand the system architecture and API integrations.</p>
+<p>
+
+Recipix showcases how AI can transform food management by reducing waste, improving meal planning, and providing a seamless, user-centric experience.</p>
+
+        </section>
+
+        <!--Concept Section-->
+        <section id="concept" class="section" style="display: none;">
+            <h1>Recipix Food Recognition & Recipe Recommendation</h1>
             <p>Recipix is an AI-powered food recognition and recipe recommendation system. It helps reduce food waste by identifying ingredients and suggesting personalized recipes based on your preferences.</p>
             
-<!--         </section>
-
-        
-        < !-- Concept Demo Section -- >
-        <section id="concept-demo" class="section" style="display:none;"> -->
-<!--             <h1>Recipix Food Recognition & Recipe Recommendation</h1> -->
-            <h1>Concept Demo</h1>
+            <!-- Concept Demo Section -->
+            <h2>Concept Demo</h2>
             <div class="step">
                 <h2>Step 1: Select a Fridge or Pantry</h2>
                 <div class="fridges">
@@ -46,14 +125,14 @@
                 </div>
             </div>
 
-            <div class="step" id="ingredients-section">
+            <div class="step" id="ingredients-section" style="display: none;">
                 <h2>Step 2: Ingredients Detected</h2>
                 <div class="ingredients" id="ingredients">
                     <!-- Ingredients will be shown here -->
                 </div>
             </div>
 
-            <div class="step" id="recipe-section">
+            <div class="step" id="recipe-section" style="display: none;">
                 <h2>Step 3: Suggested Recipe</h2>
                 <div id="recipe">
                     <!-- Recipe will be shown here -->
@@ -80,41 +159,47 @@
         </section>
 
         <!-- Paper Section -->
-        <section id="paper" class="section" style="display:none;">
+        <section id="paper" class="section" style="display: none;">
             <h1>Research Paper</h1>
-            <iframe src="recipix.pdf" width="100%" height="500px"></iframe>
-
+            <iframe src="recipix.pdf" width="100%" height="600px"></iframe>
         </section>
 
         <!-- Video Section -->
-        <section id="video" class="section" style="display:none;">
+        <section id="video" class="section" style="display: none;">
             <h1>Introduction Video</h1>
-            <video width="320" height="240" controls>
-                <source src="video/recipix_demo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <iframe width="800" height="630" src="https://www.youtube.com/embed/6-H4-OAEwC8?si=Lh8p8Wy6URnqXDzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
+
+
+<!-- Diagram Section -->
+<!-- section id="diagram" class="section" style="display:none;">
+    <h1>Diagram Flow</h1>
+    <h1><img src="images/recipix_diagram.png"></h1>
+</section> -->
+
+
+
+
 
         <!-- Request Demo Section -->
-        <section id="request-demo" class="section" style="display:none;">
+        <section id="request-demo" class="section" style="display: none;">
             <h1>Request a Demo</h1>
-            <p>If you are interested in trying Recipix for yourself, contact us to request a live demo.</p>
+            <p>If you are interested in trying Recipix for yourself, contact us to request a live demo.
+
+                <a href="mailto:roster-cursor-guts@duck.com">Contact by email</a>
+
+            </p>
         </section>
-
-
     </div>
 
+    <script src="script.js"></script>
     <script>
         // Function to show and hide sections based on the menu clicked
         function showSection(sectionId) {
-            // Hide all sections
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => section.style.display = 'none');
-
-            // Show the selected section
             document.getElementById(sectionId).style.display = 'block';
         }
     </script>
-
 </body>
 </html>

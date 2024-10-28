@@ -159,3 +159,8 @@ button:hover {
     margin-top: 10px;
 }
 
+
+iframe {
+    display: block;
+    border-style:none;
+}
