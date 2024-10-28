@@ -1,7 +1,7 @@
 // Simulated Ingredients and Recipes
 const ingredientsForPantry1 = ["ingredient1.jpg", "ingredient2.jpg", "ingredient3.jpg"];
-const ingredientsForPantry2 = ["ingredient3.jpg", "ingredient4.jpg", "ingredient5.jpg"];
-const ingredientsForPantry3 = ["ingredient1.jpg", "ingredient4.jpg", "ingredient5.jpg"];
+const ingredientsForPantry2 = ["ingredient4.jpg", "ingredient5.jpg", "ingredient6.jpg"];
+const ingredientsForPantry3 = ["ingredient7.jpg", "ingredient8.jpg", "ingredient9.jpg"];
 const recipes = {
     "pantry1": "Grilled Cheese Sandwich",
     "pantry2": "Vegan Salad",
